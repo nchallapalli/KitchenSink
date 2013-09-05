@@ -1,4 +1,4 @@
-KitchenSink
+KitchenSink [![Build Status](https://travis-ci.org/acolchado/KitchenSink.png?branch=master)](https://travis-ci.org/acolchado/KitchenSink)
 ===========
 
 AngularJS directives and services to help with common application tasks.
