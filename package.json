@@ -1,0 +1,38 @@
+{
+	"name": "KitchenSink",
+	"version": "0.0.1",
+	"description": "A library of shared directives",
+	"homepage": "http://opentable.github.io/KitchenSink",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:opentable/KitchenSink.git"
+	},
+	"engines": {
+		"node": "0.10"
+	},
+	"scripts": {
+		"test": "grunt karma:travis"
+	},
+	"license": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/opentable/KitchenSink/blob/master/LICENSE"
+		}
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"express": "~3.3.7",
+		"grunt": "~0.4.1",
+		"grunt-contrib-clean": "~0.5.0",
+		"grunt-contrib-concat": "~0.3.0",
+		"grunt-contrib-copy": "~0.4.1",
+		"grunt-contrib-watch": "~0.5.3",
+		"grunt-karma": "~0.6.2",
+		"karma": "~0.10.1",
+		"karma-jasmine": "~0.1.0",
+		"karma-chrome-launcher": "~0.1.0",
+		"karma-phantomjs-launcher": "~0.1.0",
+		"karma-ng-html2js-preprocessor": "~0.1.0",
+		"matchdep": "~0.1.2"
+	}
+}

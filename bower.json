@@ -1,0 +1,19 @@
+{
+	"name": "KitchenSink",
+	"version": "0.0.1",
+	"main": [],
+	"ignore": [
+		"example",
+		"src",
+		"test",
+		"Gruntfile.js",
+		"package.json",
+		".bowerrc",
+		".gitignore"
+	],
+	"devDependencies": {
+		"angular": "v1.2.0-rc.1",
+		"jquery": "~2.0.3",
+		"angular-mocks": "v1.2.0-rc.1"
+	}
+}
