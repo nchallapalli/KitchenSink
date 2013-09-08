@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 	grunt.registerTask("test", ["karma:travis"]);
 
 	grunt.registerTask("build", [
-		"clean", "test", "build-styles", "jekyll"
+		"clean", "test", "jekyll", "build-styles"
 	]);
 
 	grunt.registerTask("build-styles", [
