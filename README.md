@@ -9,16 +9,15 @@ NodeJS and Bower are both required. If you need to install NodeJS, please visit 
 
 Once you have NodeJS and NPM (Node Package Manager) installed, execute the following steps.
 
-## Install Bower
+## Install
 
+    // Install bower package manager
     $ npm install -g bower
 
-## Install npm packages
-
+    // Install npm packages
     $ npm install
 
-## Install bower packages
-
+    // Install bower packages
     $ bower install
 
 # Development
