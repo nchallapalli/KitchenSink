@@ -34,7 +34,7 @@ module.exports = function(config){
 
 		autoWatch: true,
 
-		browsers: [process.env.TRAVIS ? 'PhantomJS' : 'Chrome'],
+		browsers: ['PhantomJS'],
 
 		captureTimeout: 30000,
 

@@ -1,7 +1,7 @@
 var task = {
 	html: {
 		files: ['public/*.*', 'public/**/*.*'],
-		tasks: ['jekyll']
+		tasks: ['build']
 	},
 
 	styles: {
@@ -11,6 +11,16 @@ var task = {
 			'build:styles',
 			'build:styles_min'
 		]
+	},
+
+	scripts: {
+		files: [
+			'src/*.js',
+			'src/**/*.js',
+			'test/*.js',
+			'test/**/*.js'
+		],
+		tasks: ['build']
 	}
 };
 

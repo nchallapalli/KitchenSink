@@ -1,0 +1,77 @@
+body {
+	#gradient > .vertical(#ccc, #fff, -30%, 50%);
+}
+
+header {
+	padding-top: 10px;
+	background: #fff;
+	border-bottom: 1px solid #e6e6e6;
+
+
+}
+
+.navbar {
+  & .nav a {
+	color: #444;
+  }
+  & .nav .active a,
+  & .nav a:hover {
+	background-color: transparent;
+  }
+  & .nav a:hover {
+	color: @brand-primary;
+  }
+  & .nav .active a {
+	font-weight: bold;
+  }
+
+  .navbar-toggle {
+	border: 1px solid #ccc;
+	#gradient > .vertical(#ccc, #fff, 0%, 100%);
+
+	& > .icon-bar {
+	  background-color: #bbb;
+	}
+  }
+
+  margin-bottom: 0;
+  padding-bottom: @navbar-margin-bottom/2;
+  border-radius: 0;
+}
+
+.navbar-collapse {
+  &.in {
+	border-top: 1px solid #e6e6e6;
+  }
+}
+
+.ks-main-nav-collapse {
+  &.collapse {
+	.nav {
+	  float: right !important;
+	}
+  }
+  &.in {
+	.nav {
+	  float: left !important;
+	}
+  }
+}
+
+.masthead {
+  padding: 30px 15px 30px;
+  border-bottom: 1px solid #e6e6e6;
+  #gradient > .vertical(#ccc, #fff, -20%, 6%);
+
+  & h1 {
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: -1px;
+  }
+
+  & .lead {
+	font-size: 24px;
+	line-height: 1;
+  }
+}

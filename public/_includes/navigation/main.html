@@ -1,0 +1,24 @@
+<header id="header">
+    <div class="navbar" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="/">{{site.brand-name}}</a>
+                </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ks-main-nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse ks-main-nav-collapse collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li class="{% if page.primary_category == 'start' %}active{% endif %}"><a href="/start.html">Getting started</a></li>
+                    <li class="{% if page.primary_category == 'services' %}active{% endif %}"><a href="/services">Services</a></li>
+                    <li class="{% if page.primary_category == 'tools' %}active{% endif %}"><a href="/services">Tools</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

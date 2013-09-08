@@ -16,3 +16,9 @@ indent_style = tab
 [*.json]
 indent_style = tab
 
+[*.css]
+indent_style = tab
+
+[*.less]
+indent_style = tab
+

@@ -1,3 +1,5 @@
 source: ./public
 destination: ./_site
 exclude: [node_modules, vendor, grunt-tasks, Gruntfile.js, package.json, grunt-tasks, README.md, _site/**/*, tests, src, _less]
+
+brand-name: ngKitchenSink
