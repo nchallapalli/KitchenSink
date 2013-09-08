@@ -14,8 +14,6 @@ var task = {
 			files: [
 				"../vendor/bower/jquery/jquery.js",
 				"../vendor/bower/angular/angular.js",
-				"template/*.html",
-				"../lib/kitchensink-*.js",
 				"../vendor/bower/angular-mocks/angular-mocks.js",
 				"../test/unit/*.spec.js"]
 		},
