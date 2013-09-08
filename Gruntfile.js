@@ -23,7 +23,40 @@ module.exports = function(grunt) {
 	// Automatically load in all Grunt npm tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	grunt.registerTask("default", ["karma:unit"]);
-	grunt.registerTask("build", ["karma:unit"]);
-	grunt.registerTask("test", ["karma:unit"]);
+
+
+	grunt.registerTask("default", ["test"]);
+
+	grunt.registerTask("test", ["karma:travis"]);
+
+	grunt.registerTask("build", [
+		"clean", "test", "build-styles", "jekyll"
+	]);
+
+	grunt.registerTask("build-styles", [
+		"create-custom-bootstrap-file","copy",
+		"recess:styles", "recess:styles_min"
+	]);
+
+	grunt.registerTask("create-custom-bootstrap-file", function(){
+		var fs = require("fs");
+		var bootstrapLessDirectory = "vendor/bower/bootstrap/less/";
+		var bootstrapLessFile = bootstrapLessDirectory + "bootstrap.less";
+
+		if(!fs.existsSync(bootstrapLessFile))
+			throw "Bootstrap file not found. You may need to run 'npm install' and 'bower install' to generate the files. Expected location: " + bootstrapLessFile;
+
+		var content = fs.readFileSync(bootstrapLessFile, "utf8");
+		if(content === null || content.length == 0)
+			throw "Unable to read the contents of:" + bootstrapLessFile;
+
+		// Replace the variables with the customized version
+		content = content.replace("variables.less", "variable-overrides.less");
+
+		// Add the theme
+		content += "\n// Custom theme\n";
+		content += "@import \"theme.less\";";
+
+		fs.writeFileSync(bootstrapLessDirectory + "bootstrap-custom.less", content, "utf8");
+	});
 };
