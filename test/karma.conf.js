@@ -10,9 +10,10 @@ module.exports = function(config){
 			'../vendor/bower/angular/angular.js',
 
 			// Template //
-			'template/*.html',
+			//'template/*.html',
 
 			// Source //
+			'../src/*.js',
 			'../src/**/*.js',
 
 			// Mocks //
@@ -40,10 +41,6 @@ module.exports = function(config){
 		singleRun: false,
 
 		reportSlowerThan: 500,
-
-		preprocessors: {
-			"**/*.html":      "html2js"
-		},
 
 		plugins: [
 			'karma-jasmine',
