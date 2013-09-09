@@ -47,7 +47,8 @@ Files:
  * _less/variable-overrides.less - Imports the bootstrap variables file and overrides variables. Custom colors, margins, etc should be added here.
  * _less/theme.less - This file will house custom css that isn't covered in the base bootstrap theme. Buttons, containers, anything custom goes here. Allows for easier upgrading of bootstrap.
  * 
- # Work in progress
+
+# Work in progress
 
 ## Items in progress
 
