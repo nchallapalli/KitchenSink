@@ -46,3 +46,29 @@ Files:
 
  * _less/variable-overrides.less - Imports the bootstrap variables file and overrides variables. Custom colors, margins, etc should be added here.
  * _less/theme.less - This file will house custom css that isn't covered in the base bootstrap theme. Buttons, containers, anything custom goes here. Allows for easier upgrading of bootstrap.
+ * 
+ # Work in progress
+
+## Items in progress
+
+### Geo Location Service (Current Location)
+
+This service is used to create a wrapper around the window.navigator.geolocation HTML5 API.
+
+TODO:
+- [x] Code feature
+- [x] Unit tests
+- [ ] Integration tests
+- [ ] Feature test on browsers and devices
+
+## Upcoming
+
+Here a list of features that are coming up in this repo due to projects in progress:
+
+Services
+ * Google Maps API Geo Coding service
+ * Local Storage Service with Cookies as fallback
+
+Directives
+ * Hide Mobile Navigation Bar for iOS and any other browser that supports it
+
