@@ -6,8 +6,6 @@ header {
 	padding-top: 10px;
 	background: #fff;
 	border-bottom: 1px solid #e6e6e6;
-
-
 }
 
 .coming-soon
@@ -65,18 +63,29 @@ header {
 
 .masthead {
   padding: 30px 15px 30px;
-  border-bottom: 1px solid #e6e6e6;
-  #gradient > .vertical(#ccc, #fff, -20%, 6%);
+  //border-bottom: 1px solid #e6e6e6;
+  #gradient > .vertical(#ccc, #fff, -20%, 0%);
 
   & h1 {
 	font-size: 26px;
 	font-weight: bold;
 	line-height: 1;
 	letter-spacing: -1px;
+	margin-top: 0;
   }
 
   & .lead {
 	font-size: 24px;
 	line-height: 1;
   }
+}
+
+.container.content {
+  box-shadow: 0px 8px 10px #ccc,
+  			-10px 8px 15px #ccc,
+  			10px 8px 15px #ccc;
+
+  background-color: #fff;
+
+  min-height: 300px;
 }
