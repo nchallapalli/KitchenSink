@@ -6,11 +6,7 @@ var task = {
 
 	styles: {
 		files: ['_less/*.less'],
-		tasks: [
-			'create-custom-bootstrap-file',
-			'build:styles',
-			'build:styles_min'
-		]
+		tasks: ['build-styles']
 	},
 
 	scripts: {
