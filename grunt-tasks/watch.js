@@ -1,7 +1,7 @@
 var task = {
 	html: {
 		files: ['public/*.*', 'public/**/*.*'],
-		tasks: ['build']
+		tasks: ['build-dev']
 	},
 
 	styles: {
@@ -20,7 +20,7 @@ var task = {
 			'test/*.js',
 			'test/**/*.js'
 		],
-		tasks: ['build']
+		tasks: ['test']
 	}
 };
 

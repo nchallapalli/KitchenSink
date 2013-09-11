@@ -1,22 +1,8 @@
 var task = {
 	options: {
-		configFile: "test/karma.conf.js"
+		configFile: "test/karma.conf.js",
 	},
-	unit: {
-		autoWatch: true
-	},
-	travis: {
-		autoWatch: false,
-		singleRun: true
-	},
-	build: {
-		options: {
-			files: [
-				"../vendor/bower/jquery/jquery.js",
-				"../vendor/bower/angular/angular.js",
-				"../vendor/bower/angular-mocks/angular-mocks.js",
-				"../test/unit/*.spec.js"]
-		},
+	runonce: {
 		autoWatch: false,
 		singleRun: true
 	}

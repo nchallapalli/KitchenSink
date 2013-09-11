@@ -23,18 +23,36 @@ module.exports = function(grunt) {
 	// Automatically load in all Grunt npm tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+	grunt.registerTask("default", ["serve"]);
 
-
-	grunt.registerTask("default", ["test"]);
-
-	grunt.registerTask("test", ["karma:travis"]);
-
-	grunt.registerTask("build", [
-		"clean", "jekyll", "build-styles"
+	grunt.registerTask("serve", [
+		"karma:runonce"
+		, "build-dev"
+		, "connect"
+		, "open"
+		, "watch"
 	]);
 
-	grunt.registerTask("dev", [
-		"test", "build", "connect", "open", "watch"
+	grunt.registerTask("serve-dist", [
+		"karma:runonce"
+		, "build-dist"
+		, "connect"
+		, "open"
+		, "watch"
+	]);
+
+	grunt.registerTask("test", ["karma:runonce"]);
+
+	grunt.registerTask("test-dist", ["karma:runonce"]);
+
+	grunt.registerTask("build-dev", [
+		"jekyll:dev"
+		, "build-styles"
+	]);
+
+	grunt.registerTask("build-dist", [
+		"jekyll:dist"
+		, "build-styles"
 	]);
 
 	grunt.registerTask("build-styles", [
