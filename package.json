@@ -11,7 +11,7 @@
 		"node": "0.10"
 	},
 	"scripts": {
-		"test": "grunt karma:travis"
+		"test": "grunt karma:runonce"
 	},
 	"license": [
 		{
