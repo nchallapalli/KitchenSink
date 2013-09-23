@@ -6,6 +6,7 @@
 		status = null,
 		results = null,
 		error = null;
+		testAddress = {address:"sf", region:"US"};
 		
 
 	var $window = null,
@@ -63,7 +64,7 @@
 
 	describe("test geoCoding with success callback", function () {
 		it("should process address and return valid geo results through callback", function () {
-			makegeoCodingCall("sf", "US");
+			makegeoCodingCall(testAddress);
 			expect(onSuccesCallback).toHaveBeenCalledWith(results);
 		});
 	});
@@ -75,18 +76,18 @@
 		});
 	
 		it("should send error status with message", function () {
-			makegeoCodingCall("sf", "US");
+			makegeoCodingCall(testAddress);
 			expect(onErrorCallback).toHaveBeenCalledWith(error);
 		});
 	});
 
 	describe("test error when invalid arguments are passed in", function () {
 		beforeEach(function () {
-			error = { code: -1, message: "Invalid arguments, Please provide valid address and region code(ex: US, GB etc)" };
+			error = { code: -1, message: "Invalid arguments, Please provide valid data object with address." };
 		});
 
 		it("should raise error with invalid arguments message", function () {
-			makegeoCodingCall("sf", null);
+			makegeoCodingCall(null);
 			expect(onErrorCallback).toHaveBeenCalledWith(error);
 		});
 	});
@@ -95,7 +96,7 @@
 		beforeEach(function () {
 			error = { code: -1, message: "Google Geocoding service is unavailable, please make sure Api libraries are referenced correctly." };
 			$window.google = null;
-			makegeoCodingCall("sf", "US");
+			makegeoCodingCall(testAddress);
 		});
 
 		it("should raise error with google geocoder service unavailable message", function () {
